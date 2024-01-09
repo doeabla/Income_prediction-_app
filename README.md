@@ -19,7 +19,23 @@ This project aims to predict income levels based on various demographic features
 The growing disparity in income distribution poses a significant challenge, especially in developing nations. Traditional methods of monitoring income levels between census years are costly and may lack accuracy. This project addresses this issue by employing machine learning to predict income levels, offering a more efficient and precise alternative for policymakers.
 
 ## Exploratory Data Analysis (EDA)
+For this project, datasets provided on [Zindi](https://zindi.africa/competitions/income-prediction-challenge-for-azubian/data) was used. Below are steps followed to complete this project.
 
+#### 1. Load and Analyze Data:
+
+* Load the train and test datasets.
+
+* Analyze and preprocess the data.
+
+* Explore the distribution of features and the target variable.
+
+#### 2. Train a Machine Learning Model:
+
+* Split the dataset into features (X) and target (y).
+
+* Balance the dataset 
+
+* Create pipeline 
 - EDA was performed to understand the distribution of income across various demographic features.
 - Visualizations were created to analyze the relationships between age, gender, education, work class, marital status, race, etc., with income levels.
 
@@ -32,6 +48,11 @@ Three machine learning models were used for predicting income levels:
 3. **Logistic Regression**
 
 The Decision Tree model outperformed others, achieving an accuracy of 97%.
+#### 3. Save the Model:
+
+* After training the model, save it using joblib so that it can be loaded later for predictions.
+![image](https://github.com/doeabla/Income_prediction_app/assets/137217264/1fbb4566-5ee1-436e-8bba-b032c470ce0d)
+
 
 ## Evaluation
 
@@ -69,6 +90,17 @@ snapshot of code for building fastapi
 ![image](https://github.com/doeabla/Income_prediction_app/assets/137217264/ef9f8ccd-6099-43ae-9132-b801ef124b0f)
 snapsot of performance of fastapi 
 
+ 4. **Dockerize the Application**
+
+* Write a Dockerfile to containerize your FastAPI application.
+
+* Build the Docker image.
+
+* Run the Docker container.
+  
+![image](https://github.com/doeabla/Income_prediction_app/assets/137217264/302e9c75-f6c1-47a1-b476-257eec151f9d)
+snapshot of dockerfile
+
 ## Usage
 
 - Clone the repository:
@@ -99,3 +131,21 @@ uvicorn main:app --reload
 ```
 
 Access the respective URLs provided in the console for each deployment.
+
+## Acknowledgements
+We extend our sincere gratitude to Azubi Africa for providing us with the invaluable opportunity to be part of their educational programs. The experience gained during our time as students has been truly enriching and impactful. We appreciate the dedication of the mentors, instructors, and the entire Azubi Africa team for their unwavering support and commitment to our learning journey.
+
+
+## Authors
+| Name | GitHub link |
+| ---- | ---- |
+| Doe Edinam                   | https://github.com/doeabla         |
+| Enoch Taylor-Nketiah         | https://github.com/kojoboyoo       |
+| Kofi Asare Bamfo             | https://github.com/akbamfo         |
+
+
+| Project |	Name |Streamlit_App | Gradio_App| Fast_Api|
+| ---- | -----| ----- | ----- | ----- |
+| Capstone| Income_Prediction_Project |	[Streamapp](http://localhost:8501/) | [Gradapp](https://eeaca88f56287038da.gradio.live/) | [Fast_Api](http://127.0.0.1:8000/docs#/default/predict_predict_post)|
+
+Find contanerized API on [Dockerhub](https://hub.docker.com/repository/docker/abladoe/income_predict/general)
